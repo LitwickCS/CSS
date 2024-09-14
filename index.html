@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/jpeg" href="resources/mudkip.jpg">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="whole">
+    <div class="welcome">
+        <section>
+        <h1 class="welcome_font"><span>W</span>elcome</h1>
+        <p class="p1">I, <span>Russel Klein D. Torres from BSCS-2B</span> will create the best possible experience for the visitors of this webpage. To get updated to 
+        news related to this upcoming webpage, you can visit me through my social media accounts below.</p><br>
+        <a href="https://web.facebook.com/russelklein.torres/" class="fa fa-2x fa-facebook"></a>
+        <a href="https://www.instagram.com/lessureee/" class="fa fa-2x fa-instagram"></a>
+        <a href="https://x.com/kleiiini" class="fa fa-2x fa-twitter"></a><br>
+        <button class="loginbutton">Log In</button>
+        </section>
+    </div>
+
+    <div class="form">
+        <h1 class="sign">Create <span>Account</span></h1>     
+    <form>
+        <div class="emaillabel">Email</div>
+        <div class="email">
+            <input type="email" id="email" required>
+        </div><br>
+
+        <div class="passwordlabel">Password</div>
+        <div class="password">
+            <input type="password" id="password" min="7" max="15" required>
+            <img src="resources/off.png" id="off">
+        </div><br>
+        <script>
+            let off = document.getElementById("off");
+            let password = document.getElementById("password");
+
+            off.onclick = function(){
+                if(password.type == "password"){
+                    password.type = "text";
+                    off.src = "resources/on.png";
+                }else{
+                    password.type = "password";
+                    off.src = "resources/off.png";
+                }
+            }
+        </script>
+        <div class="confirmlabel">Confirm Password</div>
+        <div class="confirm">
+            <input type="password" id="confirm" min="7" max="15" required>
+            <img src="resources/off.png" id="offeye">
+        </div><br>
+        <script>
+            let offeye = document.getElementById("offeye");
+            let confirm = document.getElementById("confirm");
+
+            offeye.onclick = function(){
+                if(confirm.type == "password"){
+                    confirm.type = "text";
+                    offeye.src = "resources/on.png";
+                }else{
+                    confirm.type = "password";
+                    offeye.src = "resources/off.png";
+                }
+            }
+        </script>
+            <input class="check" type="checkbox" id="remember" required>
+            <label class="remember" for="remember">Remember Me</label><br>
+
+            <p>By creating an account you agree to the webpage's <span id="terms">Terms and Conditions</span>, including the use of cookie</p><br>
+
+            <button class="cancel" type="reset">Cancel</button>
+            <button class="sign_up" type="submit">Create</button><br><br>     
+    </form>
+</div>
+</div>
+</body>
+</html>
